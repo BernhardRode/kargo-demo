@@ -6,7 +6,7 @@ def apply_certmanager [] {
         helm upgrade --install cert-manager cert-manager
             --repo https://charts.jetstack.io
             --namespace cert-manager --create-namespace
-            --set installCRDs=true --wait
+            ---values cert-manager-values.yaml --wait
     )
 
 }
